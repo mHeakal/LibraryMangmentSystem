@@ -1,0 +1,7 @@
+Put your JavaFX User Interface related code in this package.
+This should include:
+	- Classes that create the window and scenes
+	- FXML files
+	- CSS files
+	- Images
+	- Anything else view related

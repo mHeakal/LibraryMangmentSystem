@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MemberAddController">
+   <children>
+      <Label layoutX="30.0" layoutY="30.0" text="Register" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="20.0">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="31.0" layoutY="52.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="60.0">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+         <children>
+            <Label text="First Name" />
+            <Label text="Last Name" GridPane.rowIndex="2" />
+            <Label text="Street" GridPane.rowIndex="4" />
+            <Label text="City" GridPane.rowIndex="6" />
+            <Label text="State" GridPane.rowIndex="8" />
+            <Label text="Zip" GridPane.rowIndex="10" />
+            <Label text="Phone" GridPane.rowIndex="12" />
+            <TextField fx:id="txtFirstName" GridPane.columnIndex="1" />
+            <TextField fx:id="txtLastName" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtStreet" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+            <TextField fx:id="txtCity" GridPane.columnIndex="1" GridPane.rowIndex="6" />
+            <ComboBox fx:id="cmbState" prefWidth="150.0" promptText="Iowa" GridPane.columnIndex="1" GridPane.rowIndex="8" />
+            <TextField fx:id="txtZip" GridPane.columnIndex="1" GridPane.rowIndex="10" />
+            <TextField fx:id="txtPhone" GridPane.columnIndex="1" GridPane.rowIndex="12" />
+            <Label text="Member ID" GridPane.rowIndex="14" />
+            <Label fx:id="lblFirstNameError" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Label fx:id="lblLastNameError" textFill="#f81501" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label fx:id="lblStreetError" textFill="#f81501" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+            <Label fx:id="lblCityError" textFill="#f81501" GridPane.columnIndex="1" GridPane.rowIndex="7" />
+            <Label fx:id="lblZipError" textFill="#f81501" GridPane.columnIndex="1" GridPane.rowIndex="11" />
+            <Label fx:id="lblPhoneError" textFill="#f81501" GridPane.columnIndex="1" GridPane.rowIndex="13" />
+            <TextField fx:id="txtMemberID" GridPane.columnIndex="1" GridPane.rowIndex="14" />
+            <Label fx:id="lblMemberIDError" GridPane.columnIndex="1" GridPane.rowIndex="15" />
+         
+         </children>
+      </GridPane>
+      <Button fx:id="btnAddMember" layoutX="260.0" layoutY="325.0" mnemonicParsing="false" onAction="#goAddMember" prefWidth="100.0" text="Add New User" AnchorPane.bottomAnchor="20.0" />
+      <Button fx:id="btnCancel" layoutX="375.0" layoutY="325.0" mnemonicParsing="false" onAction="#goActionCancel" prefWidth="100.0" text="Cancel" AnchorPane.bottomAnchor="20.0" />
+   </children>
+</AnchorPane>

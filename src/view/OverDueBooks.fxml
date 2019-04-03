@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml"
+	fx:controller="control.OverDueBooksController">
+
+	<GridPane alignment="CENTER" vgap="20"
+		AnchorPane.bottomAnchor="0" AnchorPane.rightAnchor="0"
+		AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0">
+		<padding>
+			<Insets top="10" right="10" bottom="10" left="10" />
+		</padding>
+		<GridPane GridPane.columnIndex="0" GridPane.rowIndex="0"
+			hgap="10" vgap="10">
+			<Label text="ISBN" GridPane.rowIndex="0"
+				GridPane.columnIndex="0" />
+			<TextField fx:id="txtISBN" GridPane.columnIndex="1"
+				GridPane.rowIndex="0" />
+			<Button defaultButton="true" onAction="#getOverDueBook"
+				text="Get Over Due Book" GridPane.columnIndex="2"
+				GridPane.rowIndex="0" />
+		</GridPane>
+
+
+		<TableView fx:id="checkoutEntryTable"
+			GridPane.columnIndex="0" GridPane.rowIndex="1"
+			GridPane.hgrow="ALWAYS" GridPane.vgrow="ALWAYS">
+			<columns>
+				<TableColumn fx:id="isbnColumn" minWidth="90"
+					text="ISBN" resizable="false">
+					<cellValueFactory>
+						<PropertyValueFactory property="isbn" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn fx:id="titleColumn" text="Title">
+					<cellValueFactory>
+						<PropertyValueFactory property="title" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn fx:id="checkoutDateColumn" minWidth="110"
+					text="Checkout Date">
+					<cellValueFactory>
+						<PropertyValueFactory property="checkoutDate" />
+					</cellValueFactory>
+				</TableColumn>
+				<TableColumn fx:id="dueDateColumn" minWidth="110"
+					text="Due Date">
+					<cellValueFactory>
+						<PropertyValueFactory property="dueDate" />
+					</cellValueFactory>
+				</TableColumn>
+			</columns>
+		</TableView>
+	</GridPane>
+</AnchorPane>

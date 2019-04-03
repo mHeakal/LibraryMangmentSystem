@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.cell.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<?import javafx.geometry.Insets?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.CheckoutRecordController">
+   <children>
+   
+       <GridPane alignment="CENTER" vgap="20" AnchorPane.bottomAnchor="0" AnchorPane.leftAnchor="0" AnchorPane.rightAnchor="0" AnchorPane.topAnchor="0">
+           <padding>
+               <Insets bottom="10" left="10" right="10" top="10" />
+           </padding>
+      <children>
+              <GridPane hgap="10" vgap="10" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                 <children>
+                     <Label text="Member ID" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+                     <Label text="ISBN" GridPane.rowIndex="2" />
+         
+                     <TextField fx:id="txtMemberID" GridPane.columnIndex="1" GridPane.rowIndex="0" />
+                     <TextField fx:id="txtISBN" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         
+                     <Button defaultButton="true" onAction="#addCheckoutRecord" text="Checkout" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+         
+                     <Label text="Member Name" GridPane.rowIndex="3" />
+                     <Label text="Address" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+         
+                     <Text fx:id="txtName" wrappingWidth="282.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="3" />
+                     <Text fx:id="txtAddress" wrappingWidth="283.0" GridPane.columnIndex="1" GridPane.columnSpan="2" GridPane.rowIndex="4" />
+                 </children>
+               <columnConstraints>
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+                  <ColumnConstraints />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+                  <RowConstraints />
+               </rowConstraints>
+              </GridPane>
+      
+      
+              <TableView fx:id="checkoutEntryTable" GridPane.columnIndex="0" GridPane.hgrow="ALWAYS" GridPane.rowIndex="1" GridPane.vgrow="ALWAYS">
+                  <columns>
+                      <TableColumn fx:id="isbnColumn" minWidth="90" resizable="false" text="ISBN">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="isbn" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="titleColumn" text="Title">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="title" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="checkoutDateColumn" minWidth="110" text="Checkout Date">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="checkoutDate" />
+                          </cellValueFactory>
+                      </TableColumn>
+                      <TableColumn fx:id="dueDateColumn" minWidth="110" text="Due Date">
+                          <cellValueFactory>
+                              <PropertyValueFactory property="dueDate" />
+                          </cellValueFactory>
+                      </TableColumn>
+                  </columns>
+              </TableView>
+      </children>
+         <columnConstraints>
+            <ColumnConstraints />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+       </GridPane>
+   </children>
+</AnchorPane>
